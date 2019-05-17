@@ -1,0 +1,34 @@
+{% extends 'candidates/layout.html' %}
+{% block body %}
+<!------ Include the above in your HEAD tag ---------->
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins ">
+<div class="container ">
+    <div class="row  custyle ">
+    <table class="table table-striped custab sticky-top ">
+            <thead class="fixed-top">
+                        <tr >
+                            <th>ID</th>
+                            <th>Candidate Name</th>
+                            <th>Candidate Last Name</th>
+                            <th >Symbol</th>
+                            <th>Result</th>
+                            
+                        </tr>
+                    </thead>
+            
+        {% for data in result %}
+        <tr>
+        <td>{{ data[0] }}</td> 
+        <td>{{ data[1] }}</td> 
+        <td>{{ data[2] }}</td> 
+        <td>{{ data[3] }}</td> 
+        <td>{{ data[4] }}</td> 
+        
+  
+    </tr>
+    {% endfor %}
+    </table>
+    </div>
+</div>
+</div>
+{% endblock %}

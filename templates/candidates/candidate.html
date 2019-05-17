@@ -1,0 +1,41 @@
+{% extends 'candidates/layout.html' %}
+{% block body %}
+<!------ Include the above in your HEAD tag ---------->
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins ">
+<div class="container ">
+    <div class="row  custyle ">
+    <table class="table table-striped custab sticky-top ">
+            <thead class="fixed-top">
+                        <tr >
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last name</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Aadhar</th>
+                            <th>Phone</th>
+                            <th >Symbol</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+            
+        {% for data in result %}
+        <tr>
+        <td>{{ data[0] }}</td> 
+        <td>{{ data[1] }}</td> 
+        <td>{{ data[2] }}</td> 
+        <td>{{ data[3] }}</td> 
+        <td>{{ data[4] }}</td> 
+        <td>{{ data[5] }}</td>
+        <td>{{ data[6] }}</td>
+        <td>{{ data[7] }}</td>  
+        <form action="">
+        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+    </form>
+    </tr>
+    {% endfor %}
+    </table>
+    </div>
+</div>
+</div>
+{% endblock %}

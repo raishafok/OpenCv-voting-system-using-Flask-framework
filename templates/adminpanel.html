@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h4 class="text-center text-primary">BIOMETRIC VOTING</h4>
+            <p id="profile-name" class="profile-name-card"></p>
+            <a class="btn btn-lg btn-primary btn-block btn-signin" type="submit" href="/candidates" role="button">Candidates</a>
+            <a class="btn btn-lg btn-primary btn-block btn-signin" type="submit" href="/candidate_register" role="button">Register Candidates</a>
+
+            <a class="btn btn-lg btn-primary btn-block btn-signin" type="submit" href="/voters" role="button">Voters</a>
+            <a class="btn btn-lg btn-primary btn-block btn-signin" type="submit" href="/voter_register" role="button">Register Voter</a>
+
+            <a class="btn btn-lg btn-primary btn-block btn-signin" type="submit" href="/result" role="button">Result</a>
+           
+            
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+{% endblock %}

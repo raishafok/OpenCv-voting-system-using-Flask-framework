@@ -1,0 +1,35 @@
+{% extends 'votes/layout.html' %}
+{% block body %}
+<!------ Include the above in your HEAD tag ---------->
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins ">
+<div class="container ">
+    <div class="row  custyle ">
+    <table class="table table-striped custab sticky-top ">
+            <thead class="fixed-top">
+                        <tr >
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last name</th>
+                            
+                            <th >Symbol</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+            
+        {% for data in result %}
+        <tr>
+        <td>{{ data[0] }}</td> 
+        <td>{{ data[1] }}</td> 
+        <td>{{ data[2] }}</td> 
+        <td>{{ data[7] }} </td>  
+       <td> <form action="{{url_for('votessubmit',id=data[0])}}" method="POST">
+            <input type="hidden" name="_method" value="VOTE"> 
+            <input type="submit" value="VOTE" class="btn btn-success btn-xs"> 
+    </form></td>
+    </tr>
+    {% endfor %}
+    </table>
+    </div>
+</div>
+</div>
+{% endblock %}

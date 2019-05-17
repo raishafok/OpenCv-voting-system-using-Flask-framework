@@ -1,0 +1,6 @@
+pip install mysql-connector-python==8.0.11
+
+
+
+source env/bin/activate
+
