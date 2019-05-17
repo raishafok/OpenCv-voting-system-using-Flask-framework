@@ -1,1 +1,2 @@
-# biometric_voting_machine
+it is a biometric voting system using python OpenCV and python Flask web Framework.
+its reads images from camera for biomtric identification.
